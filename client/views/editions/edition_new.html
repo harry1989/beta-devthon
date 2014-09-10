@@ -5,7 +5,7 @@
           <h2>List a new edition</h2>
         </div>
         <div class="large-8 columns small-4 columns large-centered">
-          {{#autoForm collection='Editions' id="newEditionForm"}}
+          {{#autoForm collection='Editions' id="newEditionForm" type="insert"}}
             <div class="large-12 columns">
               {{#if afFieldIsInvalid name='title' autoform=..}}
                 {{> afFieldLabel name='title' class="error"}}
@@ -36,7 +36,7 @@
               {{else}}
                 {{> afFieldLabel name='date'}}
               {{/if}}
-              {{> afFieldInput name='date' id='editionDate' template='plain'}}
+              <input type="datetime-local" name="date" id="editionDate" required="" data-offset="Z" data-timezoneid="UTC" data-schema-key="date" min="{{today}}" value="{{today}}">
                 {{#if afFieldIsInvalid name='date' autoform=..}}
                   <small class="error">{{afFieldMessage name="date" autoform=..}}</small>
                 {{/if}}
@@ -48,7 +48,7 @@
               {{else}}
                 {{> afFieldLabel name='description'}}
               {{/if}}
-              {{> afFieldInput name='description' id="descriptionEditor" class="regularfont" rows='6' template='plain'}}
+              {{> afFieldInput name='description' id="descriptionEditor" class="regularfont" type='textarea' rows='6' template='plain'}}
                     {{#if afFieldIsInvalid name='description' autoform=..}}
                       <small class="error">{{afFieldMessage name="description" autoform=..}}</small>
                     {{/if}}
@@ -69,9 +69,11 @@
             <div class="large-12 columns">
               <label class="control-label" for="sponsor">Sponsors</label>
               {{#afEachArrayItem name="sponsors" maxCount=4}}
-                <div class="autoform-array-item">
+                <div class="autoform-array-item row collapse">
                   <div class="large-10 columns">
-                    <input class="sponsorImage" type="file" name="sponsor" accept="image/*">
+                    <a class="file-wrapper button tiny">
+                      <input class="sponsorImage" type="file" name="sponsor" accept="image/*"> Add Sponshor image
+                    </a>
                   </div>
                   <div class="large-2 columns">
                     <button class="btn btn-default btn-lg autoform-remove-item" data-autoform-field="sponsors">

@@ -2,7 +2,6 @@ AutoForm.hooks({
   newEditionForm: {
     onSubmit: function(insertEdition, updateEdition, currentEdition) {
       console.log(insertEdition);
-      console.log(currentEdition);
     },
     // Called when any operation succeeds, where operation will be
     // "insert", "update", or the method name.
@@ -20,3 +19,13 @@ Template.edition_new.events({
     });
   }
 });
+
+Template.edition_new.helpers({
+  today: function() {
+    return new moment().format();
+  }
+})
+
+Template.edition_new.rendered = function() {
+  $("#descriptionEditor").wysihtml5();
+}

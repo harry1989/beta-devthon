@@ -31,7 +31,7 @@ Schemas.Editions = new SimpleSchema({
     optional: true
   },
   date: {
-    type: String,
+    type: Date,
     label: "Date",
     custom: function() {
       if(moment(this.value).format() === "Invalid date") {
@@ -44,7 +44,7 @@ Schemas.Editions = new SimpleSchema({
     label: "Description"
   },
   location: {
-    type: Number,
+    type: String,
     label: "Location",
   },
   sponsors: {

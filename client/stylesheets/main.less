@@ -27,6 +27,23 @@ html, body, {
 
 body {
 	font-family: @fontmain-family;
+
+}
+
+.page-container:before{
+	height: 55px;
+	display: block;
+	content: ' '
+}
+.page-container {
+	min-height: 100%;
+	position: relative;
+
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 .wrapper {
@@ -146,7 +163,7 @@ nav {
 	}
 }
 
-header {
+.header {
 	background-image: url('/assets/images/bg_sh_image.png');
 	background-repeat: no-repeat;
 	background-size: 100%;
@@ -193,6 +210,18 @@ header {
 	input {
 		font-size: 18px;
 		padding: 10px;
+	}
+	.file-wrapper {
+		position: relative;
+		input[type="file"] {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			height: 100%;
+			opacity: 0;
+		}
 	}
 
 	h4 {
@@ -326,6 +355,8 @@ button[disabled]:selected,
 }
 
 footer {
+	position: absolute;
+	bottom: 0;
 	background-color: #222;
 	color: #fff;
     height: 2.6rem;

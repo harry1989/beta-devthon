@@ -70,6 +70,7 @@ minifiers@1.0.2
 minimongo@1.0.2
 mongo-livedata@1.0.4
 mongo@1.0.4
+mrt:bootstrap3-wysihtml5@0.3.3
 mrt:moment@2.6.0
 npm-bcrypt@0.7.7
 oauth1@1.0.1

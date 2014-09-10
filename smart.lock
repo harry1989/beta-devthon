@@ -4,14 +4,13 @@
     "basePackages": {
       "foundation": {},
       "iron-router": {},
-      "packery": {},
-      "isotope-repackaged": {}
+      "bootstrap-wysihtml5": {}
     },
     "packages": {
       "foundation": {
         "git": "https://github.com/ewall/meteor-foundation.git",
-        "tag": "v5.3.3",
-        "commit": "0a879addbc52205631baf8c92340006a9b732ad3"
+        "tag": "v5.4.0",
+        "commit": "19b30241d4dfc8899163c6c15f79ab79bf11f959"
       },
       "iron-router": {
         "git": "https://github.com/EventedMind/iron-router.git",
