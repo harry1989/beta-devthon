@@ -1,0 +1,25 @@
+<template name="layout">
+  <div class="wrapper">
+    {{> nav}}
+    {{> yield}}
+    <div class="push"></div>
+  </div>
+  {{> footer}}
+</template>
+
+<template name="profile_layout">
+  {{> nav}}
+  <div class="row">
+  	<div class="container">
+	    <div class="large-12 columns large-centered">
+			<div class="large-3 columns nopadding">
+			  {{> nav_profile}}
+			</div>
+			<div class="large-9 columns">
+			  {{> yield}}
+			</div>
+	    </div>
+  	</div>
+  </div>
+  {{> footer}}
+</template>

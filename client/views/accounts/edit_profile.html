@@ -1,0 +1,51 @@
+<template name="edit_profile">
+  <dl class="tabs" data-tab="">
+    <dd class="active"><a tabindex="0" aria-selected="true" href="#tab1">Profile Settings</a></dd>
+  </dl>
+  <div class="tabs-content">
+    <div aria-hidden="false" class="content active" id="tab1">
+      <div class="row">
+        <div class="applyForm">
+          {{> edit_profile_form}}
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="edit_profile_form">
+  {{#autoForm schema="ProfileSchema" id="profileForm"}}
+    <div class="large-12 columns">
+      {{> afFieldLabel name='email'}}
+      <input type="email" name="email" autofocus="" required="" data-schema-key="email" value="{{profile.email}}">
+            {{#if afFieldIsInvalid name='email' autoform=..}}
+              <small class="error">{{afFieldMessage name="email" autoform=..}}</small>
+            {{/if}}
+    </div>
+    <div class="large-12 columns">
+      {{> afFieldLabel name='name'}}
+      <input type="text" name="name" required="" data-schema-key="name" value="{{profile.name}}">
+            {{#if afFieldIsInvalid name='name' autoform=..}}
+              <small class="error">{{afFieldMessage name="name" autoform=..}}</small>
+            {{/if}}
+    </div>
+    <div class="large-12 columns">
+      {{> afFieldLabel name='organization'}}
+      <input type="text" name="organization" required="" data-schema-key="organization" value="{{profile.organization}}">
+            {{#if afFieldIsInvalid name='organization' autoform=..}}
+              <small class="error">{{afFieldMessage name="organization" autoform=..}}</small>
+            {{/if}}
+    </div>
+    <div class="text-center">
+      <div class="large-6 columns">
+          <button type="submit" class="button button-action">Update</button>
+      </div>
+      <div class="large-6 columns">
+          <button type="submit" class="button button-action">Continue  <i class="fa fa-arrow-right"></i></button>
+      </div>
+    </div>
+  {{/autoForm}}
+</template>
+
+
+

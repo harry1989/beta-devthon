@@ -1,0 +1,124 @@
+<template name="edition">
+    <div class="container edition-page">
+        <div class="row">
+        	<div class="large-8 columns">
+        		<div class="edition-title">
+        			<h1>Metropolis Smart Cities Hackathon</h1>
+                </div>
+                <div class="edition-image">
+                    <img src="/assets/png/metropolis-header.png">
+                </div>
+    			<div class="description">
+					<p>The London Economic Development Corporation in partnership with the London Region Manufacturing Council are pleased to present the <strong>Manufacturing Matters.</strong></p>
+
+					<p><strong>  Manufacturing Matters</strong> is a must attend half day conference for manufacturers and service providers.  Delegates will learn valuable information from industry leaders, keynote speakers and peer to peer networking.  The conference will deliver essential advice applicable to all manufacturers in the London Region.</p>
+
+					<h4> <strong> Register early - space is limited!</strong></h4>
+					<h3><strong>Agenda</strong></h3>
+					<p>7:30am - Registration and Networking Hot Breakfast</p>
+
+					<p><span>8:00am – Keynote</span></p>
+
+					<p>8:45am – Manufacturing Matters Panel</p>
+
+					<p>10:00am – Networking Break</p>
+
+					<p>10:15am – Ministry Matters (MLO Presentation)</p>
+
+					<p>11:00am – Legal Matters: Siskinds the Law Firm (concurrent)</p>
+
+					<ul>
+						<li><span>Session 1: Employment and labour law update</span></li>
+						<li><span></span><span>Session 2: Immigration issues for Canadian employers</span></li>
+						<li><span></span><span>Session 3: Directors’ and officers’ liabilities</span></li>
+					</ul>
+
+					<p>12:00pm – Conference Closes</p>
+    			</div>
+        	</div>
+            <div class="large-4 columns">
+            	<div class="large-12 columns text-center">
+                    {{#if currentUser}}
+                		<a href="http://devthonbits.doattend.com" target="_blank">
+    						<div class="button button-register {{#unless currentUser}}disabled{{/unless}}">Register</div>
+                		</a>
+                    {{else}}
+                        <div class="large-12 columns">
+                            <div class="button button-register {{#unless currentUser}}disabled{{/unless}}">Register</div>
+                        </div>
+                        <div class="large-12 columns">
+                            <span class="sub-helper">Please <a href="/accounts/login">log in</a> or <a href="/accounts/signup">sign up</a> to register for this edition</span>
+                        </div>
+                    {{/if}}
+            	</div>
+            	
+            	<!-- Where -->
+            	<div class="large-12 columns">
+            		<h3 class="banner">Location</h3>
+            		<p>BITS Pilani Hyderabad Campus</p>
+            	</div>
+            	
+            	<!-- When -->
+            	<div class="large-12 columns">
+            		<h3 class="banner">Date/Time</h3>
+            		<p>October 11, 9.00am - 6.00pm</p>
+            	</div>
+            	
+            	<!-- Curator -->
+            	<div class="large-12 columns">
+            		<h3 class="banner">Curator</h3>
+            		<div class="profile_mini">
+            			<div class="large-5 columns">
+            				<img alt="Thumb_pkn_gothenburg__30_photo_by_albin_oskarsson_01" src="http://www.devthon.org/assets/prashant.png">
+            			</div>
+            			<div class="large-7 columns nopadding">
+            				<div class="large-12 columns">
+            					<h4>Prashant K V</h4>
+            				</div>
+            				<div class="large-12 columns">
+        						<a href="http://prashant.io" target="_blank">
+	            					<span class="website">prashant.io</span>
+        						</a>
+            				</div>
+            				<div class="large-12 columns">
+			                    <ul class="list-inline social-buttons profile-social">
+			                        <li><a href="https://www.facebook.com/devthon" target="_blank"><i class="foundicon-social-facebook"></i></a>
+			                        </li>
+			                        <li><a href="https://www.twitter.com/devthon" target="_blank"><i class="foundicon-social-twitter"></i></a>
+			                        </li>
+			                    </ul>
+            				</div>
+            			</div>
+            		</div>
+            	</div>
+
+            	<!-- Sponsors -->
+            	<div class="large-12 columns text-center">
+            		<h3 class="banner">Official Sponsors</h3>
+        			<div class="sponsor-list">
+	            		<div class="large-12 columns">
+		            			<a href="http://intel.com">
+		            				<img class="sponsor" src="http://www.cloudera.com/content/dam/cloudera/logos/partners/intel_logo.png" alt="Intel">
+		            			</a>
+	            		</div>
+        			</div>
+            	</div>
+
+            	<!-- Sponsors -->
+            	<div class="large-12 columns text-center">
+            		<h3 class="banner">Edition Sponsors</h3>
+        			<div class="sponsor-list">
+	            		<div class="large-12 columns">
+		            			<a href="http://PurpleTalk.com">
+		            				<img class="sponsor" src="http://4.bp.blogspot.com/-mm_UV15Yqqs/UzEO3K-il_I/AAAAAAAASQU/HPVPrloPBNg/s1600/Purpletalk_logo.png" alt="PurpleTalk">
+		            			</a>
+		            			<a href="http://zippr.com">
+		            				<img class="sponsor" src="https://s3.amazonaws.com/internshala_uploads/logo/Zippr_651288.jpg" alt="Zippr">
+		            			</a>
+	            		</div>
+        			</div>
+            	</div>
+            </div>
+        </div>
+    </div>
+</template>

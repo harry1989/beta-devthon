@@ -1,0 +1,54 @@
+<template name="forgot_page">
+  <div class="row" style="padding-top: 1rem;">
+    <div class="large-6 columns large-centered">
+        {{#if resetPassword}}
+          {{> password_reset_form}}
+        {{else}}
+          {{> password_recovery_form}}
+        {{/if}}
+    </div>
+  </div>
+</template>
+
+<template name="password_recovery_form">
+  {{#autoForm id="passwordForm" schema="ForgotPasswordSchema" class="accounts-form" action="action"}}
+  <div class="login-box regularfont">
+    <div class="large-9 columns large-centered">
+      {{> afFieldInput name='email' id="forgot-email" placeholder="Your Email"}}
+        {{#if afFieldIsInvalid name='email' autoform=..}}
+          <small class="error">{{afFieldMessage name="email" autoform=..}}</small>
+        {{/if}}
+    </div>
+    <div class="large-9 columns large-centered text-center">
+      <input type="submit" id="reset-password" value="Reset my password" class="button button-action" />
+    </div>
+    <div class="large-9 columns large-centered help-links text-center">
+      <div class="large-12 columns">
+        <a class="login" href="/accounts/login">I remember my password</a>
+      </div>
+    </div>
+  </div>
+  {{/autoForm}}
+</template>
+
+<template name="password_reset_form">
+  {{#autoForm id="passwordResetForm" schema="ResetPasswordSchema" class="accounts-form" action="action"}}
+  <div class="login-box regularfont">
+    <div class="large-9 columns large-centered">
+      {{> afFieldInput name='password' id="reset-password" type='password' placeholder="Your Password"}}
+        {{#if afFieldIsInvalid name='password' autoform=..}}
+          <small class="error">{{afFieldMessage name="password" autoform=..}}</small>
+        {{/if}}
+    </div>
+    <div class="large-9 columns large-centered">
+      {{> afFieldInput name='confirmPassword' type='password' placeholder="Your Password again"}}
+        {{#if afFieldIsInvalid name='confirmPassword' autoform=..}}
+          <small class="error">{{afFieldMessage name="confirmPassword" autoform=..}}</small>
+        {{/if}}
+    </div>
+    <div class="large-9 columns large-centered text-center">
+      <input type="submit" id="update-password" value="Update" class="button button-action" />
+    </div>
+  </div>
+  {{/autoForm}}
+</template>

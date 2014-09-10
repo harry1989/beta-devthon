@@ -1,0 +1,29 @@
+.accounts-form {
+	margin: 2rem 0;
+	padding: 3rem 0;
+	background-color: rgba(134, 158, 204, 0.1);
+	border-radius: 5px;
+}
+
+.help-links a {
+  text-align: center;
+  font-size: 16.83px;
+}
+
+.help-links a:hover {
+  text-decoration: none;
+}
+
+.bt-padding {
+  text-transform: none;
+}
+
+.bt-padding i {
+  padding-right: 10px;
+}
+
+.bt-text {
+  text-transform: none;
+  letter-spacing: 0.23px;
+  padding: 0;
+}

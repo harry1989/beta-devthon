@@ -1,0 +1,8 @@
+{
+  "name": "svgicons",
+  "description": "Animated SVG Icons with Snap.svg",
+  "homepage": "https://github.com/codrops/AnimatedSVGIcons",
+  "version": "1.0",
+  "git": "https://github.com/codrops/AnimatedSVGIcons.git",
+  "packages": {}
+}

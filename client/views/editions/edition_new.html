@@ -1,0 +1,147 @@
+<template name="edition_new">
+    <div class="row">
+      <div class="container new-edition">
+        <div class="large-8 small-4 columns large-centered text-center">
+          <h2>List a new edition</h2>
+        </div>
+        <div class="large-8 columns small-4 columns large-centered">
+          {{#autoForm collection='Editions' id="newEditionForm"}}
+            <div class="large-12 columns">
+              {{#if afFieldIsInvalid name='title' autoform=..}}
+                {{> afFieldLabel name='title' class="error"}}
+              {{else}}
+                  {{> afFieldLabel name='title'}}
+              {{/if}}
+              {{> afFieldInput name='title' autofocus='' template='plain'}}
+              {{#if afFieldIsInvalid name='title' autoform=..}}
+                <small class="error">{{afFieldMessage name="title" autoform=..}}</small>
+              {{/if}}
+            </div>
+
+            <div class="large-12 columns">
+              {{#if afFieldIsInvalid name='image' autoform=..}}
+                {{> afFieldLabel name='image' class="error"}}
+              {{else}}
+                  {{> afFieldLabel name='image'}}
+              {{/if}}
+              {{> afFieldInput name='image' autofocus='' template='plain'}}
+              {{#if afFieldIsInvalid name='image' autoform=..}}
+                <small class="error">{{afFieldMessage name="image" autoform=..}}</small>
+              {{/if}}
+            </div>
+
+            <div class="large-12 columns">
+              {{#if afFieldIsInvalid name='date' autoform=..}}
+                {{> afFieldLabel name='date' class="error"}}
+              {{else}}
+                {{> afFieldLabel name='date'}}
+              {{/if}}
+              {{> afFieldInput name='date' id='editionDate' template='plain'}}
+                {{#if afFieldIsInvalid name='date' autoform=..}}
+                  <small class="error">{{afFieldMessage name="date" autoform=..}}</small>
+                {{/if}}
+            </div>
+
+            <div class="large-12 columns">
+              {{#if afFieldIsInvalid name='description' autoform=..}}
+                {{> afFieldLabel name='description' class="error"}}
+              {{else}}
+                {{> afFieldLabel name='description'}}
+              {{/if}}
+              {{> afFieldInput name='description' id="descriptionEditor" class="regularfont" rows='6' template='plain'}}
+                    {{#if afFieldIsInvalid name='description' autoform=..}}
+                      <small class="error">{{afFieldMessage name="description" autoform=..}}</small>
+                    {{/if}}
+            </div>
+
+            <div class="large-12 columns">
+              {{#if afFieldIsInvalid name='location' autoform=..}}
+                {{> afFieldLabel name='location' class="error"}}
+              {{else}}
+                  {{> afFieldLabel name='location'}}
+              {{/if}}
+              {{> afFieldInput name='location' autofocus='' template='plain'}}
+              {{#if afFieldIsInvalid name='location' autoform=..}}
+                <small class="error">{{afFieldMessage name="location" autoform=..}}</small>
+              {{/if}}
+            </div>
+
+            <div class="large-12 columns">
+              <label class="control-label" for="sponsor">Sponsors</label>
+              {{#afEachArrayItem name="sponsors" maxCount=4}}
+                <div class="autoform-array-item">
+                  <div class="large-10 columns">
+                    <input class="sponsorImage" type="file" name="sponsor" accept="image/*">
+                  </div>
+                  <div class="large-2 columns">
+                    <button class="btn btn-default btn-lg autoform-remove-item" data-autoform-field="sponsors">
+                      <i class="fa fa-minus"></i>
+                    </button>
+                  </div>
+                </div>
+              {{/afEachArrayItem}}
+              <button class="btn btn-default btn-lg autoform-add-item" data-autoform-field="sponsors" data-autoform-minCount="3" data-autoform-maxCount="4">
+                <i class="fa fa-plus"></i>
+              </button>
+            </div>
+
+            <div class="large-12 columns">
+              <h4>Curator</h4>
+
+              <div class="large-12 columns">
+                {{#if afFieldIsInvalid name='curator.$.name' autoform=..}}
+                  {{> afFieldLabel name='curator.$.name' class="error"}}
+                {{else}}
+                  {{> afFieldLabel name='curator.$.name'}}
+                {{/if}}
+                {{> afFieldInput name='curator.$.name' id="curator.$.nameEditor" template='plain'}}
+                {{#if afFieldIsInvalid name='curator.$.name' autoform=..}}
+                  <small class="error">{{afFieldMessage name="curator.$.name" autoform=..}}</small>
+                {{/if}}
+              </div>
+
+              <div class="large-12 columns">
+                {{#if afFieldIsInvalid name='curator.$.website' autoform=..}}
+                  {{> afFieldLabel name='curator.$.website' class="error"}}
+                {{else}}
+                  {{> afFieldLabel name='curator.$.website'}}
+                {{/if}}
+                {{> afFieldInput name='curator.$.website' template='plain'}}
+                {{#if afFieldIsInvalid name='curator.$.website' autoform=..}}
+                  <small class="error">{{afFieldMessage name="curator.$.website" autoform=..}}</small>
+                {{/if}}
+              </div>
+
+              <div class="large-12 columns">
+                {{#if afFieldIsInvalid name='curator.$.twitter' autoform=..}}
+                  {{> afFieldLabel name='curator.$.twitter' class="error"}}
+                {{else}}
+                  {{> afFieldLabel name='curator.$.twitter'}}
+                {{/if}}
+                {{> afFieldInput name='curator.$.twitter' id="curator.$.twitterEditor" template='plain'}}
+                {{#if afFieldIsInvalid name='curator.$.twitter' autoform=..}}
+                  <small class="error">{{afFieldMessage name="curator.$.twitter" autoform=..}}</small>
+                {{/if}}
+              </div>
+
+              <div class="large-12 columns">
+                {{#if afFieldIsInvalid name='curator.$.facebook' autoform=..}}
+                  {{> afFieldLabel name='curator.$.facebook' class="error"}}
+                {{else}}
+                  {{> afFieldLabel name='curator.$.facebook'}}
+                {{/if}}
+                {{> afFieldInput name='curator.$.facebook' id="curator.$.facebookEditor" template='plain'}}
+                {{#if afFieldIsInvalid name='curator.$.facebook' autoform=..}}
+                  <small class="error">{{afFieldMessage name="curator.$.facebook" autoform=..}}</small>
+                {{/if}}
+              </div>
+            </div>
+
+            <div class="large-6 columns large-centered text-center">
+              <button type="submit" class="button button-action">List</button>
+            </div>
+          {{/autoForm}}
+        </div>
+      </div>
+    </div>
+</template>

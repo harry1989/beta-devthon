@@ -1,0 +1,46 @@
+<template name="signup_page">
+  <div class="row" style="padding-top: 1rem;">
+    <div class="large-6 columns large-centered">
+        {{> register_form}}
+    </div>
+  </div>
+</template>
+
+<template name="register_form">
+  {{#autoForm id="registerForm" schema="RegisterSchema" class="accounts-form" type="submit"}}
+	<div class="login-box regularfont">
+      	<div class="large-9 columns large-centered">
+        	{{> afFieldInput name='name' autofocus='' id="account-name" placeholder="Your Name"}}
+            {{#if afFieldIsInvalid name='name' autoform=..}}
+            	<small class="error">{{afFieldMessage name="name" autoform=..}}</small>
+            {{/if}}
+      	</div>
+      	<div class="large-9 columns large-centered">
+        	{{> afFieldInput name='email' id="account-email" placeholder="Your Email"}}
+            {{#if afFieldIsInvalid name='email' autoform=..}}
+            	<small class="error">{{afFieldMessage name="email" autoform=..}}</small>
+            {{/if}}
+      	</div>
+      	<div class="large-9 columns large-centered">
+        	{{> afFieldInput name='password' id="account-password" type='password' placeholder="Your Password"}}
+            {{#if afFieldIsInvalid name='password' autoform=..}}
+            	<small class="error">{{afFieldMessage name="password" autoform=..}}</small>
+            {{/if}}
+      	</div>
+      	<div class="large-9 columns large-centered">
+        	{{> afFieldInput name='confirmPassword' type='password' placeholder="Your Password again"}}
+            {{#if afFieldIsInvalid name='confirmPassword' autoform=..}}
+            	<small class="error">{{afFieldMessage name="confirmPassword" autoform=..}}</small>
+            {{/if}}
+      	</div>
+      	<div class="large-9 columns large-centered text-center">
+			   <input type="submit" id="create-account" value="Create Account" class="button button-action" />
+      	</div>
+      	<div class="large-9 columns large-centered help-links text-center">
+      		<div class="large-12 columns large-centered">
+      			<a class="login" href="/accounts/login">I already have an account</a>
+      		</div>
+      	</div>
+	</div>
+  {{/autoForm}}
+</template>

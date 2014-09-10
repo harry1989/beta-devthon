@@ -1,0 +1,49 @@
+<template name="login_page">
+	<div class="row" style="padding-top: 1rem;">
+		<div class="large-6 columns large-centered">
+			{{> login_form}}
+		</div>
+	</div>
+</template>
+
+<template name="login_form">
+  {{#autoForm id="loginForm" schema="LoginSchema" class="accounts-form" action="action"}}
+    <div class="login-box regularfont">
+      <div class="large-9 columns large-centered">
+       <div id="fb-login" class="button button-facebook bt-padding">
+          <i class="fa fa-facebook fa-2x"></i>
+          <span class="fb-text">Login with Facebook</span>
+       </div>
+       <!-- <div id="tw-login" class="twitter-button bt-padding">
+          <i class="fa fa-twitter fa-lg"></i>Login with Twitter
+       </div> -->
+       <div class="large-6 columns large-centered">
+        (or login manually)
+       </div>
+      </div>
+      <div class="large-9 columns large-centered">
+        {{> afFieldInput name='email' id="login-email" placeholder="Email"}}
+          {{#if afFieldIsInvalid name='email' autoform=..}}
+            <small class="error">{{afFieldMessage name="email" autoform=..}}</small>
+          {{/if}}
+      </div>
+      <div class="large-9 columns large-centered">
+        {{> afFieldInput name='password' id="login-password" type='password' placeholder="Password"}}
+          {{#if afFieldIsInvalid name='password' autoform=..}}
+            <small class="error">{{afFieldMessage name="password" autoform=..}}</small>
+          {{/if}}
+      </div>
+    	<div class="large-9 columns large-centered text-center">
+		   <input type="submit" id="login-done" value="Login" class="button button-action" />
+    	</div>
+    	<div class="large-9 columns large-centered help-links text-center">
+    		<div class="large-6 columns">
+    			<a class="signup" href="/accounts/signup">Sign Up Now</a>
+    		</div>
+    		<div class="large-6 columns">
+    			<a class="forgot" href="/accounts/forgot">Forgot Password?</a>
+    		</div>
+    	</div>
+   </div>
+  {{/autoForm}}
+</template>

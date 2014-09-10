@@ -1,0 +1,59 @@
+<template name="host">
+	<div class="row">
+		<div class="applyForm">
+			<div class="large-6 columns large-centered text-center">
+				<h2>Apply to host your edition</h2>
+				<p>We'd love to know more about you and your interests</p>
+			</div>
+			<div class="large-8 columns large-centered small-4 columns">
+				{{#autoForm collection=applications schema="ApplySchema" id="applyForm"}}
+					<div class="large-12 columns">
+						{{> afFieldLabel name='name'}}
+						{{> afFieldInput name='name' autofocus='' template='plain'}}
+			            {{#if afFieldIsInvalid name='name' autoform=..}}
+			            	<small class="error">{{afFieldMessage name="name" autoform=..}}</small>
+			            {{/if}}
+					</div>
+					<div class="large-12 columns">
+						{{> afFieldLabel name='location'}}
+						{{> afFieldInput name='location' id='endDate' template='plain'}}
+			            {{#if afFieldIsInvalid name='location' autoform=..}}
+			            	<small class="error">{{afFieldMessage name="location" autoform=..}}</small>
+			            {{/if}}
+					</div>
+					<div class="large-12 columns">
+						{{> afFieldLabel name='profession'}}
+						{{> afFieldInput name='profession' template='plain'}}
+			            {{#if afFieldIsInvalid name='profession' autoform=..}}
+			            	<small class="error">{{afFieldMessage name="profession" autoform=..}}</small>
+			            {{/if}}
+					</div>
+					<div class="large-12 columns aboutGroup">
+						{{> afFieldLabel name='about'}}
+						{{> afFieldInput name='about' id="aboutEditor" rows='6' template='plain'}}
+			            {{#if afFieldIsInvalid name='about' autoform=..}}
+			            	<small class="error">{{afFieldMessage name="about" autoform=..}}</small>
+			            {{/if}}
+					</div>
+					<div class="large-12 columns">
+						{{> afFieldLabel name='intent'}}
+						{{> afFieldInput name='intent' id="intentEditor" rows='6' template='plain'}}
+			            {{#if afFieldIsInvalid name='intent' autoform=..}}
+			            	<small class="error">{{afFieldMessage name="intent" autoform=..}}</small>
+			            {{/if}}
+					</div>
+					<div class="large-12 columns">
+						{{> afFieldLabel name='info'}}
+						{{> afFieldInput name='info' id="infoEditor" rows='3' template='plain'}}
+			            {{#if afFieldIsInvalid name='info' autoform=..}}
+			            	<small class="error">{{afFieldMessage name="info" autoform=..}}</small>
+			            {{/if}}
+					</div>
+					<div class="large-6 columns large-centered text-center">
+				      <button type="submit" class="button button-action">Submit</button>
+					</div>
+				{{/autoForm}}
+			</div>
+		</div>
+	</div>
+</template>

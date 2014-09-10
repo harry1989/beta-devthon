@@ -1,0 +1,31 @@
+# Meteor packages used by this project, one per line.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+standard-app-packages
+
+less
+
+foundation
+iron:router
+aldeed:simple-schema
+aldeed:autoform
+accounts-facebook
+accounts-twitter
+underscore
+accounts-password
+accounts-base
+service-configuration
+accounts-ui
+chrismbeckett:toastr
+meteorhacks:subs-manager
+mrt:moment
+aldeed:collection2
+cfs:standard-packages
+cfs:filesystem
+cfs:graphicsmagick
+meteorhacks:zones
+meteorhacks:kadira
+meteorhacks:fast-render
+
