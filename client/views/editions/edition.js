@@ -1,4 +1,4 @@
-Template.edition.events({
+Template.edition_metropolis.events({
 	'click button': function(e) {
 		if(!Meteor.user()) {
 			e.preventDefault();
@@ -13,5 +13,23 @@ Template.edition.events({
 	},
 	'click a': function() {
 		setRedirect();
+	}
+});
+
+Template.edition_metropolis.helpers({
+	announced: function() {
+		return true;
+	}
+});
+
+Template.edition_bits.helpers({
+	announced: function() {
+		return false;
+	}
+});
+
+Template.edition_eflu.helpers({
+	announced: function() {
+		return false;
 	}
 });

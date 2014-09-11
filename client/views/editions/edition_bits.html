@@ -1,0 +1,93 @@
+<template name="edition_bits">
+    <div class="container edition-page">
+      <div class="row">
+        <div class="edition-title">
+          <h1><strong>devthon@BITS</strong></h1>
+        </div>
+        <div class="large-8 columns">
+          <div class="edition-image">
+              <img src="/assets/images/jpg/bits-header.jpg">
+          </div>
+          <div class="description left">
+            <p>Details to be announced</p>
+          </div>
+        </div>
+          <div class="large-4 columns">
+            <div class="large-12 columns text-center">
+              {{#if currentUser}}
+                {{#if announced}}
+                  <a href="http://devthonbits.doattend.com" target="_blank">
+                    <div class="button button-register button-nomargin {{#unless currentUser}}disabled{{/unless}}">Register</div>
+                  </a>
+                {{else}}
+                  <div class="button button-nomargin disabled">Register</div>
+                {{/if}}
+              {{else}}
+                <div class="large-12 columns">
+                    <div class="button button-register button-nomargin {{#unless currentUser}}disabled{{/unless}}">Register</div>
+                </div>
+               {{#if announced}}
+                <div class="large-12 columns">
+                    <span class="sub-helper">Please <a href="/accounts/login">log in</a> or <a href="/accounts/signup">sign up</a> to register for this edition</span>
+                </div>
+               {{/if}}
+              {{/if}}
+            </div>
+            
+            <!-- Where -->
+            <div class="large-12 columns">
+              <h3 class="banner">Location</h3>
+              <p>BITS Pilani Hyderabad Campus</p>
+            </div>
+            
+            <!-- When -->
+            <div class="large-12 columns">
+              <h3 class="banner">Date/Time</h3>
+              <p>October 11th, 9.00am - October 12th, 6.00pm</p>
+            </div>
+
+            <!-- Sponsors -->
+            <!-- <div class="large-12 columns text-center">
+              <h3 class="banner">Official Sponsors</h3>
+              <div class="sponsor-list">
+                <p>To be listed</p>
+                <div class="large-12 columns">
+                  <a href="http://intel.com">
+                    <img class="sponsor" src="http://www.cloudera.com/content/dam/cloudera/logos/partners/intel_logo.png" alt="Intel">
+                  </a>
+                </div>
+              </div>
+            </div> -->
+            
+            <!-- Curator -->
+            <div class="large-12 columns">
+              <h3 class="banner">Curator</h3>
+              <div class="profile_mini">
+                <div class="large-5 columns">
+                  <img alt="Utkarsh Gupta" src="/assets/images/jpg/utkarsh.jpg">
+                </div>
+                <div class="large-7 columns nopadding">
+                  <div class="large-12 columns">
+                    <h4>Utkarsh Gupta</h4>
+                  </div>
+                  <div class="large-12 columns">
+                  <!-- <a href="http://prashant.io" target="_blank">
+                    <span class="website">prashant.io</span>
+                  </a> -->
+                  </div>
+                  <div class="large-12 columns">
+                    <ul class="list-inline social-buttons profile-social">
+                      <li><a href="https://www.facebook.com/utkarsh.ferrari" target="_blank"><i class="foundicon-social-facebook"></i></a>
+                      </li>
+                     <!--  <li><a href="https://www.twitter.com/devthon" target="_blank"><i class="foundicon-social-twitter"></i></a>
+                      </li> -->
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+      </div>
+  </div>
+</template>

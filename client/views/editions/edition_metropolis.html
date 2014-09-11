@@ -1,0 +1,132 @@
+<template name="edition_metropolis">
+    <div class="container edition-page">
+      <div class="row">
+        <div class="edition-title">
+          <h1>Metropolis Smart Cities Hackathon</h1>
+        </div>
+        <div class="large-8 columns">
+          <div class="edition-image">
+              <img src="/assets/png/metropolis-header.png">
+          </div>
+          <div class="description left">
+            <p>The Government of Telangana has expressed avid interest in making Hyderabad into a world class city. Initiatives to build a better and smarter city will unleash the latent productivity or urban population by improving mobility, traffic and providing the right ecosystem for entrepreneurial pursuits and enterprises to build better businesses.</p>
+
+            <p>The ‘Devthon at Metropolis’ will be a hackathon where a diverse group of students, professionals and experts from different fields gather and work together for 36 hours to develop a proof of concept prototypes. The goal is to enable participants to build a Smarter Hyderabad and pave the future for innovative and affordable technologies.</p>
+
+            <p><strong>Registration Fee: ₹500 - space is limited!</strong></p>
+                    
+            <h4><strong>Prizes up to ₹2,00,000 to be won!</strong></h4>
+            <h4><strong>Agenda</strong></h4>
+            <div class="large-6 columns">
+              <h5>October 5th, 2014</h5>
+              <p>9.00 - Participant Check-in/Introduction/Guidelines</p>
+              <p>10.00 - Participants pitch challenges / form & register teams</p>
+              <p>10.30 - Solutions through design thinking</p>
+              <p>11.30 - Teams start work on solutions & prototypes</p>
+              <p>13.30 - Lunch</p>
+              <p>16.00 - Checkpoint 1 - Teams update the challenge they are working on</p>
+              <p>16.30 - Tea</p>
+              <p>20.30 - Dinner</p>
+            </div>
+
+            <div class="large-6 columns">
+              <h5>October 5th, 2014</h5>
+              <p>8.00 - Breakfast</p>
+              <p>10.00 - Checkpoint 2 - Teams update the challenge they are working on</p>
+              <p>13.00 - Lunch</p>
+              <p>16.00 - Presentations and Judging begins</p>
+              <p>17.00 - Winners are announced</p>
+              <p>17.30 - Close</p>
+            </div>
+
+            <div class="large-12 columns nopadding">
+              <h4><strong>Why Attend?</strong></h4>
+              <ul>
+                <li>Upto ₹2,00,000 worth of awards</li>
+                <li>Access to datasets and platforms made available to participants</li>
+                <li>Address challenges and build solutions that create an impact</li>
+                <li>Wide array of Facilitators; engineers, data scientists, urban researchers and many more</li>
+                <li>Unique networking opportunities</li>
+                <li>An awesome time!</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+          <div class="large-4 columns">
+            <div class="large-12 columns text-center">
+              {{#if currentUser}}
+                {{#if announced}}
+                  <a href="http://devthonbits.doattend.com" target="_blank">
+                    <div class="button button-register button-nomargin {{#unless currentUser}}disabled{{/unless}}">Register</div>
+                  </a>
+                {{else}}
+                  <div class="button button-nomargin disabled">Register</div>
+                {{/if}}
+              {{else}}
+                <div class="large-12 columns">
+                    <div class="button button-register button-nomargin {{#unless currentUser}}disabled{{/unless}}">Register</div>
+                </div>
+                <div class="large-12 columns">
+                    <span class="sub-helper">Please <a href="/accounts/login">log in</a> or <a href="/accounts/signup">sign up</a> to register for this edition</span>
+                </div>
+              {{/if}}
+            </div>
+            
+            <!-- Where -->
+            <div class="large-12 columns">
+              <h3 class="banner">Location</h3>
+              <p>Hyderabad International Convention Centre</p>
+            </div>
+            
+            <!-- When -->
+            <div class="large-12 columns">
+              <h3 class="banner">Date/Time</h3>
+              <p>October 5th, 9.00am - October 6th, 6.00pm</p>
+            </div>
+
+            <!-- Sponsors -->
+            <div class="large-12 columns text-center">
+              <h3 class="banner">Official Sponsors</h3>
+              <div class="sponsor-list">
+                <p>To be listed</p>
+                <!-- <div class="large-12 columns">
+                  <a href="http://intel.com">
+                    <img class="sponsor" src="http://www.cloudera.com/content/dam/cloudera/logos/partners/intel_logo.png" alt="Intel">
+                  </a>
+                </div> -->
+              </div>
+            </div>
+            
+            <!-- Curator -->
+            <!-- <div class="large-12 columns">
+              <h3 class="banner">Curator</h3>
+              <div class="profile_mini">
+                <div class="large-5 columns">
+                  <img alt="Thumb_pkn_gothenburg__30_photo_by_albin_oskarsson_01" src="http://www.devthon.org/assets/prashant.png">
+                </div>
+                <div class="large-7 columns nopadding">
+                  <div class="large-12 columns">
+                    <h4>Prashant K V</h4>
+                  </div>
+                  <div class="large-12 columns">
+                  <a href="http://prashant.io" target="_blank">
+                    <span class="website">prashant.io</span>
+                  </a>
+                  </div>
+                  <div class="large-12 columns">
+                    <ul class="list-inline social-buttons profile-social">
+                      <li><a href="https://www.facebook.com/devthon" target="_blank"><i class="foundicon-social-facebook"></i></a>
+                      </li>
+                      <li><a href="https://www.twitter.com/devthon" target="_blank"><i class="foundicon-social-twitter"></i></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
+          </div>
+      </div>
+  </div>
+</template>

@@ -16,21 +16,20 @@
 
 		    <!-- Right Nav Section -->
 		    <ul class="right fix-align">
-		      <li><a href="#">FAQs</a></li>
-		      <li><a href="#">Blog</a></li>
+		      <li><a href="http://blog.devthon.org" target="_blank">Blog</a></li>
 			  <li class="divider"></li>
-			  {{#if currentUser.isAdmin}}
+			  <!-- {{#if currentUser.isAdmin}}
 			  	<li class="pf-lnk"><a href="/editions/new">+ New Edition</a></li>
-			  {{/if}}
+			  {{/if}} -->
 			  <li class="pf-lnk">
-			 	<a class="login-link-text" id="login-name-link" href="{{displayLink}}">
 				  {{#if currentUser}}
 				  	{{#if hasImage}}
 				  	  <img class="pf-img" src="{{displayImage}}">
 				  	{{/if}}
 				  {{/if}}
 			      {{displayName}} 
-			    </a>
+			 	<!-- <a class="login-link-text" id="login-name-link" href="{{displayLink}}">
+		    </a> -->
 			  </li>
 		      {{#if currentUser}}
 		      <li class="pf-lnk">
